@@ -1,0 +1,57 @@
+{
+ "checks": [
+  {
+   "id": "method-text-found",
+   "ok": true,
+   "detail": "1 text file(s)",
+   "weight": 1.0,
+   "critical": true
+  },
+  {
+   "id": "config-found",
+   "ok": true,
+   "detail": "12 keys",
+   "weight": 1.0,
+   "critical": false
+  },
+  {
+   "id": "parameters-found",
+   "ok": true,
+   "detail": "10 parameter mentions",
+   "weight": 1.0,
+   "critical": true
+  },
+  {
+   "id": "provenance-complete",
+   "ok": true,
+   "detail": "10 matched, 0 conflict, 0 not_reported",
+   "weight": 1.0,
+   "critical": false
+  },
+  {
+   "id": "no-conflicts",
+   "ok": true,
+   "detail": "0 value(s) disagree with the config: []",
+   "weight": 1.0,
+   "critical": true
+  },
+  {
+   "id": "anchors-verified",
+   "ok": true,
+   "detail": "10/10 parameter mentions re-slice",
+   "weight": 1.0,
+   "critical": true
+  },
+  {
+   "id": "checklist-coverage",
+   "ok": true,
+   "detail": "6/8 checklist items found",
+   "weight": 0.8,
+   "critical": false
+  }
+ ],
+ "passed": 7,
+ "total": 7,
+ "ratio": 1.0,
+ "failed_critical": []
+}

@@ -1,0 +1,10 @@
+{"id": "p1", "claim": "learning_rate = 3e-4 (matched)", "anchor": {"source": "inputs/methods.md", "char_start": 78, "char_end": 99, "quote": "learning rate of 3e-4"}, "verified": true, "note": "exact"}
+{"id": "p2", "claim": "batch_size = 64 (matched)", "anchor": {"source": "inputs/methods.md", "char_start": 103, "char_end": 119, "quote": "batch size of 64"}, "verified": true, "note": "exact"}
+{"id": "p3", "claim": "epochs = 12 (matched)", "anchor": {"source": "inputs/methods.md", "char_start": 125, "char_end": 134, "quote": "12 epochs"}, "verified": true, "note": "exact"}
+{"id": "p4", "claim": "optimizer = AdamW (matched)", "anchor": {"source": "inputs/methods.md", "char_start": 67, "char_end": 72, "quote": "AdamW"}, "verified": true, "note": "exact"}
+{"id": "p5", "claim": "schedule = cosine (matched)", "anchor": {"source": "inputs/methods.md", "char_start": 142, "char_end": 156, "quote": "cosine schedul"}, "verified": true, "note": "exact"}
+{"id": "p6", "claim": "hardware = A100 (matched)", "anchor": {"source": "inputs/methods.md", "char_start": 245, "char_end": 269, "quote": "A100 40GB for approximat"}, "verified": true, "note": "exact"}
+{"id": "p7", "claim": "beam_width = 4 (matched)", "anchor": {"source": "inputs/methods.md", "char_start": 341, "char_end": 353, "quote": "beam width 4"}, "verified": true, "note": "exact"}
+{"id": "p8", "claim": "repeats = three (matched)", "anchor": {"source": "inputs/methods.md", "char_start": 404, "char_end": 415, "quote": "three times"}, "verified": true, "note": "exact"}
+{"id": "p9", "claim": "dataset = standard split (matched)", "anchor": {"source": "inputs/methods.md", "char_start": 321, "char_end": 335, "quote": "standard split"}, "verified": true, "note": "exact"}
+{"id": "p10", "claim": "wall_clock_hours = 9 (matched)", "anchor": {"source": "inputs/methods.md", "char_start": 273, "char_end": 280, "quote": "9 hours"}, "verified": true, "note": "exact"}

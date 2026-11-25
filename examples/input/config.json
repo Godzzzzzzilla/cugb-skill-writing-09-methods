@@ -1,0 +1,14 @@
+{
+ "optimizer": "AdamW",
+ "learning_rate": 0.0003,
+ "batch_size": 64,
+ "epochs": 12,
+ "schedule": "cosine",
+ "seed": 42,
+ "hardware": "A100 40GB",
+ "wall_clock_hours": 9,
+ "beam_width": 4,
+ "repeats": 3,
+ "dataset": "standard split",
+ "metric": "exact match"
+}

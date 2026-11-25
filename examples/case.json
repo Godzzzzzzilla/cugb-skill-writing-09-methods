@@ -1,0 +1,6 @@
+{
+ "case_id": "demo-methods-01",
+ "task": "Check the method section against the run configuration: every parameter must trace to a source, missing ones are not_reported, and a reproduction checklist is produced.",
+ "materials": ["methods.md", "config.json"],
+ "output_contract": {"fields": ["provenance", "checklist", "not_reported", "coverage", "evidence"]}
+}

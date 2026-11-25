@@ -1,0 +1,48 @@
+{
+ "deviations_from_paper": [
+  {
+   "target": "evidence anchors re-slice exactly",
+   "metric": "custom",
+   "reference_value": 1.0,
+   "actual_value": 1.0,
+   "score": 1.0,
+   "tolerance": 0.0,
+   "verifier_script": "scripts/verify.py",
+   "evidence_artifact": "result",
+   "explanation": "Every evidence item is a character range into an emitted text file; verify.py re-slices it and recomputes the share that still matches."
+  }
+ ],
+ "envelope": [
+  {
+   "condition": "method text plus a run configuration",
+   "status": "in envelope",
+   "note": "10/10 parameters traced on the demo"
+  },
+  {
+   "condition": "method text with no configuration",
+   "status": "partial",
+   "note": "parameters listed as not_reported; never inferred, never rejected"
+  },
+  {
+   "condition": "config in a format other than JSON",
+   "status": "partial",
+   "note": "only JSON is parsed; other keys are reported as absent"
+  }
+ ],
+ "failure_modes": [
+  {
+   "mode": "parameter in the text but not in the config",
+   "impact": "not_reported with the quote; run continues"
+  },
+  {
+   "mode": "parameter values disagree",
+   "impact": "conflict flagged, status partial, both values quoted"
+  },
+  {
+   "mode": "no configuration at all",
+   "impact": "checklist all unknown, status partial, no inference"
+  }
+ ],
+ "sensitivity": [],
+ "note": "This is a skill-authoring challenge: the targets are the demonstration benchmark and the audit, not a paper's reported numbers."
+}

@@ -1,0 +1,771 @@
+{
+ "schema": "arm-skill-result/1.1",
+ "skill": {
+  "name": "writing-09-methods",
+  "version": "1.0.0",
+  "armkit": "1.1.0"
+ },
+ "case_id": "demo-methods-01",
+ "status": "success",
+ "status_reason": "every parameter traces to the config and the checklist is covered",
+ "result": {
+  "provenance": [
+   {
+    "name": "learning_rate",
+    "value": "3e-4",
+    "char_start": 78,
+    "char_end": 99,
+    "quote": "learning rate of 3e-4",
+    "source": "inputs/methods.md",
+    "source_value": 0.0003,
+    "status": "matched",
+    "evidence_id": "p1"
+   },
+   {
+    "name": "batch_size",
+    "value": "64",
+    "char_start": 103,
+    "char_end": 119,
+    "quote": "batch size of 64",
+    "source": "inputs/methods.md",
+    "source_value": 64,
+    "status": "matched",
+    "evidence_id": "p2"
+   },
+   {
+    "name": "epochs",
+    "value": "12",
+    "char_start": 125,
+    "char_end": 134,
+    "quote": "12 epochs",
+    "source": "inputs/methods.md",
+    "source_value": 12,
+    "status": "matched",
+    "evidence_id": "p3"
+   },
+   {
+    "name": "optimizer",
+    "value": "AdamW",
+    "char_start": 67,
+    "char_end": 72,
+    "quote": "AdamW",
+    "source": "inputs/methods.md",
+    "source_value": "AdamW",
+    "status": "matched",
+    "evidence_id": "p4"
+   },
+   {
+    "name": "schedule",
+    "value": "cosine",
+    "char_start": 142,
+    "char_end": 156,
+    "quote": "cosine schedul",
+    "source": "inputs/methods.md",
+    "source_value": "cosine",
+    "status": "matched",
+    "evidence_id": "p5"
+   },
+   {
+    "name": "hardware",
+    "value": "A100",
+    "char_start": 245,
+    "char_end": 269,
+    "quote": "A100 40GB for approximat",
+    "source": "inputs/methods.md",
+    "source_value": "A100 40GB",
+    "status": "matched",
+    "evidence_id": "p6"
+   },
+   {
+    "name": "beam_width",
+    "value": "4",
+    "char_start": 341,
+    "char_end": 353,
+    "quote": "beam width 4",
+    "source": "inputs/methods.md",
+    "source_value": 4,
+    "status": "matched",
+    "evidence_id": "p7"
+   },
+   {
+    "name": "repeats",
+    "value": "three",
+    "char_start": 404,
+    "char_end": 415,
+    "quote": "three times",
+    "source": "inputs/methods.md",
+    "source_value": 3,
+    "status": "matched",
+    "evidence_id": "p8"
+   },
+   {
+    "name": "dataset",
+    "value": "standard split",
+    "char_start": 321,
+    "char_end": 335,
+    "quote": "standard split",
+    "source": "inputs/methods.md",
+    "source_value": "standard split",
+    "status": "matched",
+    "evidence_id": "p9"
+   },
+   {
+    "name": "wall_clock_hours",
+    "value": "9",
+    "char_start": 273,
+    "char_end": 280,
+    "quote": "9 hours",
+    "source": "inputs/methods.md",
+    "source_value": 9,
+    "status": "matched",
+    "evidence_id": "p10"
+   }
+  ],
+  "checklist": [
+   {
+    "item": "code_version",
+    "label": "the exact code revision",
+    "status": "unknown",
+    "found_in": []
+   },
+   {
+    "item": "dependencies",
+    "label": "pinned dependency versions",
+    "status": "unknown",
+    "found_in": []
+   },
+   {
+    "item": "hardware",
+    "label": "the hardware the numbers came from",
+    "status": "present",
+    "found_in": [
+     "method text",
+     "config"
+    ]
+   },
+   {
+    "item": "seeds",
+    "label": "random seeds and repetition count",
+    "status": "present",
+    "found_in": [
+     "method text",
+     "config"
+    ]
+   },
+   {
+    "item": "data_split",
+    "label": "which split was used",
+    "status": "present",
+    "found_in": [
+     "method text",
+     "config"
+    ]
+   },
+   {
+    "item": "hyperparameters",
+    "label": "the hyperparameters",
+    "status": "present",
+    "found_in": [
+     "method text",
+     "config"
+    ]
+   },
+   {
+    "item": "runtime",
+    "label": "how long a run takes",
+    "status": "present",
+    "found_in": [
+     "method text",
+     "config"
+    ]
+   },
+   {
+    "item": "evaluation_metric",
+    "label": "the metric and its definition",
+    "status": "present",
+    "found_in": [
+     "method text",
+     "config"
+    ]
+   }
+  ],
+  "coverage": {
+   "parameters": 10,
+   "matched": 10,
+   "conflicts": 0,
+   "not_reported": 0,
+   "checklist_present": 6,
+   "checklist_total": 8
+  },
+  "not_reported": [],
+  "parameter_count": 10,
+  "checklist_present": 6
+ },
+ "evidence": [
+  {
+   "id": "p1",
+   "claim": "learning_rate = 3e-4 (matched)",
+   "anchor": {
+    "source": "inputs/methods.md",
+    "char_start": 78,
+    "char_end": 99,
+    "quote": "learning rate of 3e-4"
+   },
+   "verified": true,
+   "note": "exact"
+  },
+  {
+   "id": "p2",
+   "claim": "batch_size = 64 (matched)",
+   "anchor": {
+    "source": "inputs/methods.md",
+    "char_start": 103,
+    "char_end": 119,
+    "quote": "batch size of 64"
+   },
+   "verified": true,
+   "note": "exact"
+  },
+  {
+   "id": "p3",
+   "claim": "epochs = 12 (matched)",
+   "anchor": {
+    "source": "inputs/methods.md",
+    "char_start": 125,
+    "char_end": 134,
+    "quote": "12 epochs"
+   },
+   "verified": true,
+   "note": "exact"
+  },
+  {
+   "id": "p4",
+   "claim": "optimizer = AdamW (matched)",
+   "anchor": {
+    "source": "inputs/methods.md",
+    "char_start": 67,
+    "char_end": 72,
+    "quote": "AdamW"
+   },
+   "verified": true,
+   "note": "exact"
+  },
+  {
+   "id": "p5",
+   "claim": "schedule = cosine (matched)",
+   "anchor": {
+    "source": "inputs/methods.md",
+    "char_start": 142,
+    "char_end": 156,
+    "quote": "cosine schedul"
+   },
+   "verified": true,
+   "note": "exact"
+  },
+  {
+   "id": "p6",
+   "claim": "hardware = A100 (matched)",
+   "anchor": {
+    "source": "inputs/methods.md",
+    "char_start": 245,
+    "char_end": 269,
+    "quote": "A100 40GB for approximat"
+   },
+   "verified": true,
+   "note": "exact"
+  },
+  {
+   "id": "p7",
+   "claim": "beam_width = 4 (matched)",
+   "anchor": {
+    "source": "inputs/methods.md",
+    "char_start": 341,
+    "char_end": 353,
+    "quote": "beam width 4"
+   },
+   "verified": true,
+   "note": "exact"
+  },
+  {
+   "id": "p8",
+   "claim": "repeats = three (matched)",
+   "anchor": {
+    "source": "inputs/methods.md",
+    "char_start": 404,
+    "char_end": 415,
+    "quote": "three times"
+   },
+   "verified": true,
+   "note": "exact"
+  },
+  {
+   "id": "p9",
+   "claim": "dataset = standard split (matched)",
+   "anchor": {
+    "source": "inputs/methods.md",
+    "char_start": 321,
+    "char_end": 335,
+    "quote": "standard split"
+   },
+   "verified": true,
+   "note": "exact"
+  },
+  {
+   "id": "p10",
+   "claim": "wall_clock_hours = 9 (matched)",
+   "anchor": {
+    "source": "inputs/methods.md",
+    "char_start": 273,
+    "char_end": 280,
+    "quote": "9 hours"
+   },
+   "verified": true,
+   "note": "exact"
+  }
+ ],
+ "uncertainty": [],
+ "limits": [],
+ "audit": {
+  "checks": [
+   {
+    "id": "method-text-found",
+    "ok": true,
+    "detail": "1 text file(s)",
+    "weight": 1.0,
+    "critical": true
+   },
+   {
+    "id": "config-found",
+    "ok": true,
+    "detail": "12 keys",
+    "weight": 1.0,
+    "critical": false
+   },
+   {
+    "id": "parameters-found",
+    "ok": true,
+    "detail": "10 parameter mentions",
+    "weight": 1.0,
+    "critical": true
+   },
+   {
+    "id": "provenance-complete",
+    "ok": true,
+    "detail": "10 matched, 0 conflict, 0 not_reported",
+    "weight": 1.0,
+    "critical": false
+   },
+   {
+    "id": "no-conflicts",
+    "ok": true,
+    "detail": "0 value(s) disagree with the config: []",
+    "weight": 1.0,
+    "critical": true
+   },
+   {
+    "id": "anchors-verified",
+    "ok": true,
+    "detail": "10/10 parameter mentions re-slice",
+    "weight": 1.0,
+    "critical": true
+   },
+   {
+    "id": "checklist-coverage",
+    "ok": true,
+    "detail": "6/8 checklist items found",
+    "weight": 0.8,
+    "critical": false
+   }
+  ],
+  "passed": 7,
+  "total": 7,
+  "ratio": 1.0,
+  "failed_critical": []
+ },
+ "artifacts": [
+  {
+   "path": "inputs/methods.md",
+   "kind": "data",
+   "exists": true,
+   "bytes": 440,
+   "sha256": "bd859312c54c26a34f5a499830a0abe53f3303de1dcbc6f6d0fcc463a99a06df",
+   "note": "method text, copied verbatim"
+  },
+  {
+   "path": "inputs/config.json",
+   "kind": "data",
+   "exists": true,
+   "bytes": 260,
+   "sha256": "7ed814a11574fa7f126dea9843491d10fc4522d10e9d984e58b2a8581168255b",
+   "note": "run configuration, copied verbatim"
+  },
+  {
+   "path": "methods_checked.md",
+   "kind": "data",
+   "exists": true,
+   "bytes": 1463,
+   "sha256": "27244976afeab9f1edf9a55d893afa9ddeccaf555acb9fced15951d38a42ad04",
+   "note": "method text with the provenance and checklist tables"
+  }
+ ],
+ "contract": {
+  "declared_fields": [
+   "provenance",
+   "checklist",
+   "not_reported",
+   "coverage",
+   "evidence"
+  ],
+  "fields": {
+   "provenance": [
+    {
+     "name": "learning_rate",
+     "value": "3e-4",
+     "char_start": 78,
+     "char_end": 99,
+     "quote": "learning rate of 3e-4",
+     "source": "inputs/methods.md",
+     "source_value": 0.0003,
+     "status": "matched",
+     "evidence_id": "p1"
+    },
+    {
+     "name": "batch_size",
+     "value": "64",
+     "char_start": 103,
+     "char_end": 119,
+     "quote": "batch size of 64",
+     "source": "inputs/methods.md",
+     "source_value": 64,
+     "status": "matched",
+     "evidence_id": "p2"
+    },
+    {
+     "name": "epochs",
+     "value": "12",
+     "char_start": 125,
+     "char_end": 134,
+     "quote": "12 epochs",
+     "source": "inputs/methods.md",
+     "source_value": 12,
+     "status": "matched",
+     "evidence_id": "p3"
+    },
+    {
+     "name": "optimizer",
+     "value": "AdamW",
+     "char_start": 67,
+     "char_end": 72,
+     "quote": "AdamW",
+     "source": "inputs/methods.md",
+     "source_value": "AdamW",
+     "status": "matched",
+     "evidence_id": "p4"
+    },
+    {
+     "name": "schedule",
+     "value": "cosine",
+     "char_start": 142,
+     "char_end": 156,
+     "quote": "cosine schedul",
+     "source": "inputs/methods.md",
+     "source_value": "cosine",
+     "status": "matched",
+     "evidence_id": "p5"
+    },
+    {
+     "name": "hardware",
+     "value": "A100",
+     "char_start": 245,
+     "char_end": 269,
+     "quote": "A100 40GB for approximat",
+     "source": "inputs/methods.md",
+     "source_value": "A100 40GB",
+     "status": "matched",
+     "evidence_id": "p6"
+    },
+    {
+     "name": "beam_width",
+     "value": "4",
+     "char_start": 341,
+     "char_end": 353,
+     "quote": "beam width 4",
+     "source": "inputs/methods.md",
+     "source_value": 4,
+     "status": "matched",
+     "evidence_id": "p7"
+    },
+    {
+     "name": "repeats",
+     "value": "three",
+     "char_start": 404,
+     "char_end": 415,
+     "quote": "three times",
+     "source": "inputs/methods.md",
+     "source_value": 3,
+     "status": "matched",
+     "evidence_id": "p8"
+    },
+    {
+     "name": "dataset",
+     "value": "standard split",
+     "char_start": 321,
+     "char_end": 335,
+     "quote": "standard split",
+     "source": "inputs/methods.md",
+     "source_value": "standard split",
+     "status": "matched",
+     "evidence_id": "p9"
+    },
+    {
+     "name": "wall_clock_hours",
+     "value": "9",
+     "char_start": 273,
+     "char_end": 280,
+     "quote": "9 hours",
+     "source": "inputs/methods.md",
+     "source_value": 9,
+     "status": "matched",
+     "evidence_id": "p10"
+    }
+   ],
+   "checklist": [
+    {
+     "item": "code_version",
+     "label": "the exact code revision",
+     "status": "unknown",
+     "found_in": []
+    },
+    {
+     "item": "dependencies",
+     "label": "pinned dependency versions",
+     "status": "unknown",
+     "found_in": []
+    },
+    {
+     "item": "hardware",
+     "label": "the hardware the numbers came from",
+     "status": "present",
+     "found_in": [
+      "method text",
+      "config"
+     ]
+    },
+    {
+     "item": "seeds",
+     "label": "random seeds and repetition count",
+     "status": "present",
+     "found_in": [
+      "method text",
+      "config"
+     ]
+    },
+    {
+     "item": "data_split",
+     "label": "which split was used",
+     "status": "present",
+     "found_in": [
+      "method text",
+      "config"
+     ]
+    },
+    {
+     "item": "hyperparameters",
+     "label": "the hyperparameters",
+     "status": "present",
+     "found_in": [
+      "method text",
+      "config"
+     ]
+    },
+    {
+     "item": "runtime",
+     "label": "how long a run takes",
+     "status": "present",
+     "found_in": [
+      "method text",
+      "config"
+     ]
+    },
+    {
+     "item": "evaluation_metric",
+     "label": "the metric and its definition",
+     "status": "present",
+     "found_in": [
+      "method text",
+      "config"
+     ]
+    }
+   ],
+   "not_reported": [],
+   "coverage": {
+    "parameters": 10,
+    "matched": 10,
+    "conflicts": 0,
+    "not_reported": 0,
+    "checklist_present": 6,
+    "checklist_total": 8
+   },
+   "evidence": [
+    {
+     "id": "p1",
+     "claim": "learning_rate = 3e-4 (matched)",
+     "anchor": {
+      "source": "inputs/methods.md",
+      "char_start": 78,
+      "char_end": 99,
+      "quote": "learning rate of 3e-4"
+     },
+     "verified": true,
+     "note": "exact"
+    },
+    {
+     "id": "p2",
+     "claim": "batch_size = 64 (matched)",
+     "anchor": {
+      "source": "inputs/methods.md",
+      "char_start": 103,
+      "char_end": 119,
+      "quote": "batch size of 64"
+     },
+     "verified": true,
+     "note": "exact"
+    },
+    {
+     "id": "p3",
+     "claim": "epochs = 12 (matched)",
+     "anchor": {
+      "source": "inputs/methods.md",
+      "char_start": 125,
+      "char_end": 134,
+      "quote": "12 epochs"
+     },
+     "verified": true,
+     "note": "exact"
+    },
+    {
+     "id": "p4",
+     "claim": "optimizer = AdamW (matched)",
+     "anchor": {
+      "source": "inputs/methods.md",
+      "char_start": 67,
+      "char_end": 72,
+      "quote": "AdamW"
+     },
+     "verified": true,
+     "note": "exact"
+    },
+    {
+     "id": "p5",
+     "claim": "schedule = cosine (matched)",
+     "anchor": {
+      "source": "inputs/methods.md",
+      "char_start": 142,
+      "char_end": 156,
+      "quote": "cosine schedul"
+     },
+     "verified": true,
+     "note": "exact"
+    },
+    {
+     "id": "p6",
+     "claim": "hardware = A100 (matched)",
+     "anchor": {
+      "source": "inputs/methods.md",
+      "char_start": 245,
+      "char_end": 269,
+      "quote": "A100 40GB for approximat"
+     },
+     "verified": true,
+     "note": "exact"
+    },
+    {
+     "id": "p7",
+     "claim": "beam_width = 4 (matched)",
+     "anchor": {
+      "source": "inputs/methods.md",
+      "char_start": 341,
+      "char_end": 353,
+      "quote": "beam width 4"
+     },
+     "verified": true,
+     "note": "exact"
+    },
+    {
+     "id": "p8",
+     "claim": "repeats = three (matched)",
+     "anchor": {
+      "source": "inputs/methods.md",
+      "char_start": 404,
+      "char_end": 415,
+      "quote": "three times"
+     },
+     "verified": true,
+     "note": "exact"
+    },
+    {
+     "id": "p9",
+     "claim": "dataset = standard split (matched)",
+     "anchor": {
+      "source": "inputs/methods.md",
+      "char_start": 321,
+      "char_end": 335,
+      "quote": "standard split"
+     },
+     "verified": true,
+     "note": "exact"
+    },
+    {
+     "id": "p10",
+     "claim": "wall_clock_hours = 9 (matched)",
+     "anchor": {
+      "source": "inputs/methods.md",
+      "char_start": 273,
+      "char_end": 280,
+      "quote": "9 hours"
+     },
+     "verified": true,
+     "note": "exact"
+    }
+   ]
+  },
+  "unmapped": [],
+  "raw": {
+   "fields": [
+    "provenance",
+    "checklist",
+    "not_reported",
+    "coverage",
+    "evidence"
+   ]
+  }
+ },
+ "run": {
+  "started_at": "2026-11-25T07:54:51Z",
+  "finished_at": "2026-11-25T07:54:51Z",
+  "argv": [
+   "scripts/run.py",
+   "--input",
+   "examples/case.json",
+   "--output",
+   "C:\\Users\\zcy\\WorkBuddy\\2026-11-25-15-07-35\\arena\\tasks\\writing-09-methods\\app_output"
+  ],
+  "python": "3.13.14",
+  "cwd": "C:\\Users\\zcy\\WorkBuddy\\2026-11-25-15-07-35\\arena\\tasks\\writing-09-methods",
+  "config_keys": [
+   "batch_size",
+   "beam_width",
+   "dataset",
+   "epochs",
+   "hardware",
+   "learning_rate",
+   "metric",
+   "optimizer",
+   "repeats",
+   "schedule",
+   "seed",
+   "wall_clock_hours"
+  ],
+  "case_notes": []
+ }
+}
